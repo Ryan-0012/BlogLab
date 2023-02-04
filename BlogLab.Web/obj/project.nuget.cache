@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "JnKhcQcI5n9C+z39CejsnDFvCA1YD9LNZNOv3tnEyRed7BFrfAWcIC1bGh2q5GZgh9TwunVo9pxo4C7YXxxMdQ==",
+  "dgSpecHash": "3/iC305ynynSnuELDY12qtBQEYrJ0VUfH/qyA4QFrZ4YmzWBIowghlgBXmK3Bs8uxdGijKkOtOl0QpmLWYiDiQ==",
   "success": true,
   "projectFilePath": "C:\\TI\\Vs\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ryanf\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
+    "C:\\Users\\ryanf\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\ryanf\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\ryanf\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
