@@ -9,7 +9,7 @@ namespace BlogLab.Models.BlogComment
 {
     public class BlogCommentCreate
     {
-        public int MyProperty { get; set; }
+        public int BlogCommentId { get; set; }
 
         public int? ParentBlogCommentId { get; set; }
 
