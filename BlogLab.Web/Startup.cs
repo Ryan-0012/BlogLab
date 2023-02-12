@@ -96,7 +96,7 @@ namespace BlogLab.Web
 
             app.ConfigureExceptionHandler();
 
-            app.UseRouting();
+            app.UseRouting(); 
 
             if (env.IsDevelopment())
             {
