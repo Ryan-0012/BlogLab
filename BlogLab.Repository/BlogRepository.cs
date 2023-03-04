@@ -90,18 +90,18 @@ namespace BlogLab.Repository
 
         public async Task<List<Blog>> GetAllByUserIdAsync(int applicationUserId)
         {
-            IEnumerable<Blog> blog;
+            IEnumerable<Blog> blogs;
 
             using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))//conexão com o servidor SQL
             {
                 await connection.OpenAsync();
-                blog = await connection.QueryAsync<Blog>(
+                blogs = await connection.QueryAsync<Blog>(
                     "Blog_GetByUserId",
                     new { ApplicationUserId = applicationUserId },
                     commandType: CommandType.StoredProcedure);
 
             }
-            return blog.ToList();
+            return blogs.ToList();
         }
 
         public async Task<List<Blog>> GetAllFamousAsync()

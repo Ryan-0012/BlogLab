@@ -62,18 +62,31 @@ namespace BlogLab.Repository
 
             ApplicationUserIdentity applicationUser;
 
-            using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))//conexão com o servidor SQL
+            try
             {
-                await connection.OpenAsync(cancellationToken);
+                using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                {
+                    await connection.OpenAsync(cancellationToken);
 
-                applicationUser = await connection.QuerySingleOrDefaultAsync<ApplicationUserIdentity>(
-                    "Account_GetByUsername", new { NormalizedUsername = normalizedUsername },
-                    commandType: CommandType.StoredProcedure
-                    );
-                
+                    if (connection.State != ConnectionState.Open) // verificação da conexão
+                    {
+                        throw new Exception("Não foi possível conectar ao banco de dados.");
+                    }
+
+                    applicationUser = await connection.QuerySingleOrDefaultAsync<ApplicationUserIdentity>(
+                        "Account_GetByUsername", new { NormalizedUsername = normalizedUsername },
+                        commandType: CommandType.StoredProcedure
+                        );
+                }
             }
-            return applicationUser;
+            catch (Exception ex)
+            {
+                // tratamento de exceção
+                throw ex;
+            }
 
+            return applicationUser;
         }
+
     }
 }

@@ -1,9 +1,13 @@
-﻿using BlogLab.Models.Blog;
+﻿using System;
+using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
+using System.Threading.Tasks;
+using BlogLab.Models.Blog;
 using BlogLab.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.IdentityModel.Tokens.Jwt;
 
 namespace BlogLab.Web.Controllers
 {
@@ -91,7 +95,7 @@ namespace BlogLab.Web.Controllers
             {
                 return BadRequest("You didn't create this blog.");
             }
-            return Ok(blogs);
+            
         }   
 
     }

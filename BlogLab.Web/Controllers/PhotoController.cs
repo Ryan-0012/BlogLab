@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.JsonWebTokens;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BlogLab.Web.Controllers
 {
@@ -63,7 +66,7 @@ namespace BlogLab.Web.Controllers
         [HttpGet("{photoId}")]
         public async Task<ActionResult<Photo>> Get(int photoId)
         {
-            var photo = _photoRepository.GetAsync(photoId);
+            var photo = await _photoRepository.GetAsync(photoId);
 
             return Ok(photo);
         }

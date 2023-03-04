@@ -1,6 +1,9 @@
 ﻿using BlogLab.Models.Account;
 using BlogLab.Repository;
 using Microsoft.AspNetCore.Identity;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace BlogLab.Identity
 {
@@ -31,12 +34,12 @@ namespace BlogLab.Identity
             throw new NotImplementedException();
         }
 
-        public Task<ApplicationUserIdentity?> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
+        public Task<ApplicationUserIdentity> FindByEmailAsync(string normalizedEmail, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ApplicationUserIdentity?> FindByIdAsync(string userId, CancellationToken cancellationToken)
+        public Task<ApplicationUserIdentity> FindByIdAsync(string userId, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

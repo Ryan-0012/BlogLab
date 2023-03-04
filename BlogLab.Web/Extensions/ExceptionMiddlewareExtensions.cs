@@ -1,5 +1,7 @@
 ﻿using BlogLab.Models.Exception;
 using CloudinaryDotNet.Actions;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Diagnostics;
 using System.Net;
 using System.Net.Mime;

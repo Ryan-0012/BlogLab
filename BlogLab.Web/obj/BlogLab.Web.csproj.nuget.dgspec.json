@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\TI\\Vs\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj": {}
+    "C:\\TI\\Vs\\BlogLab\\bloglab.web\\BlogLab.Web.csproj": {}
   },
   "projects": {
     "C:\\TI\\Vs\\BlogLab\\BlogLab.Identity\\BlogLab.Identity.csproj": {
@@ -110,7 +110,7 @@
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[13.0.2, )"
+              "version": "[13.0.3-beta1, )"
             }
           },
           "imports": [
@@ -291,14 +291,14 @@
         }
       }
     },
-    "C:\\TI\\Vs\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj": {
+    "C:\\TI\\Vs\\BlogLab\\bloglab.web\\BlogLab.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\TI\\Vs\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj",
+        "projectUniqueName": "C:\\TI\\Vs\\BlogLab\\bloglab.web\\BlogLab.Web.csproj",
         "projectName": "BlogLab.Web",
-        "projectPath": "C:\\TI\\Vs\\BlogLab\\BlogLab.Web\\BlogLab.Web.csproj",
+        "projectPath": "C:\\TI\\Vs\\BlogLab\\bloglab.web\\BlogLab.Web.csproj",
         "packagesPath": "C:\\Users\\ryanf\\.nuget\\packages\\",
-        "outputPath": "C:\\TI\\Vs\\BlogLab\\BlogLab.Web\\obj\\",
+        "outputPath": "C:\\TI\\Vs\\BlogLab\\bloglab.web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ryanf\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -317,6 +317,9 @@
             "projectReferences": {
               "C:\\TI\\Vs\\BlogLab\\BlogLab.Identity\\BlogLab.Identity.csproj": {
                 "projectPath": "C:\\TI\\Vs\\BlogLab\\BlogLab.Identity\\BlogLab.Identity.csproj"
+              },
+              "C:\\TI\\Vs\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj": {
+                "projectPath": "C:\\TI\\Vs\\BlogLab\\BlogLab.Models\\BlogLab.Models.csproj"
               },
               "C:\\TI\\Vs\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj": {
                 "projectPath": "C:\\TI\\Vs\\BlogLab\\BlogLab.Repository\\BlogLab.Repository.csproj"
@@ -339,11 +342,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[6.0.11, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[3.1.10, )"
             }
           },
           "imports": [
