@@ -45,7 +45,7 @@ namespace BlogLab.Web.Controllers
             {
                 PublicId= uploadResult.PublicId,
                 ImageUrl = uploadResult.SecureUrl.AbsoluteUri,
-                Description = file.Name
+                Description = file.FileName
             };
 
             var photo = await _photoRepository.InsertAsync(photoCreate, applicationUserId);

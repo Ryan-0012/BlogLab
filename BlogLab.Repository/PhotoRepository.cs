@@ -80,7 +80,7 @@ namespace BlogLab.Repository
             dataTable.Columns.Add("Description", typeof(string));
 
             dataTable.Rows.Add(photoCreate.PublicId, photoCreate.ImageUrl, photoCreate.Description);
-
+            Console.WriteLine(photoCreate.Description);
             int newPhotoId;
 
             using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))//conexão com o servidor SQL

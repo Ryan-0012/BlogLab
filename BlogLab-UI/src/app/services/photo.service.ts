@@ -15,7 +15,11 @@ export class PhotoService {
 
   
   create(model: FormData) : Observable<Photo> {
+    model.forEach((value: any, key: string) => {
+      console.log(key, value);
+    });
     return this.http.post<Photo>(`${environment.webApi}/Photo`, model);
+    
   }
 
   getByApplicationUserId() : Observable<Photo[]> {

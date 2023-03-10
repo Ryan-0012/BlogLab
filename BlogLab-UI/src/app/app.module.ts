@@ -68,6 +68,8 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     BsDropdownModule.forRoot(),
     CollapseModule.forRoot(),
     TypeaheadModule.forRoot(),
+    CarouselModule.forRoot(),
+    PaginationModule.forRoot()
   ],
   providers: [
     HttpClient,
