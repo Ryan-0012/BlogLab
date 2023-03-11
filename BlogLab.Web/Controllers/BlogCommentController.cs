@@ -32,7 +32,7 @@ namespace BlogLab.Web.Controllers
         }
 
         
-        [HttpPost("{blogId}")]
+        [HttpGet("{blogId}")]
         public async Task<ActionResult<List<BlogComment>>> GettAll(int blogId)
         {
             var blogComments = await _blogCommentRepository.GetAllAsync(blogId);

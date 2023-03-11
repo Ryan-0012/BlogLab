@@ -12,17 +12,17 @@ export class BlogCommentService {
 
   constructor(
     private http: HttpClient
-  ) {}
+  ) { }
 
-  create(model: BlogCommentCreate) : Observable<BlogComment>{
+  create(model: BlogCommentCreate) : Observable<BlogComment>  {
     return this.http.post<BlogComment>(`${environment.webApi}/BlogComment`, model);
   }
-  
-  delete(blogCommentId: number) : Observable<number>{
+
+  delete(blogCommentId: number) : Observable<number>  {
     return this.http.delete<number>(`${environment.webApi}/BlogComment/${blogCommentId}`);
   }
 
-  getAll(blogId: number) : Observable<BlogComment[]>{
+  getAll(blogId: number) : Observable<BlogComment[]> {
     return this.http.get<BlogComment[]>(`${environment.webApi}/BlogComment/${blogId}`);
   }
 }
